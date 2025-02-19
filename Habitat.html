@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Moose Website</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Old Mac Donald.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="unclicked">JOKES</div></a>
+        <a href="Diet.html"><div class="unclicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="unclicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="clicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="unclicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="unclicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>Habitat</h2>
+      <p>
+        Moose live across North America, Asia and Europe. Here they can be found
+        in the following countries - Belarus; Canada; China; Croatia; Czechia;
+        Estonia; Finland; Germany; Hungary; Kazakhstan; Latvia; Lithuania;
+        Moldova; Mongolia; Norway; Poland; Romania; Russian Federation;
+        Slovakia; Sweden; Ukraine and the United States.
+      </p>
+      <br />
+      <br />
+      <p>
+        A population which formerly occurred in Austria is now considered to be
+        extinct. Some from other countries may occasionally migrate through this
+        country though.​
+      </p>
+      <br />
+      <br />
+      <p>
+        They were introduced to New Zealand but this population is now believed
+        to be extinct.
+      </p>
+      <br />
+      <br />
+    </div>
+    <div class="imageContainer">
+      <img class="image1" src="Moose Habitat.jpg" onclick="playAudio();" />
+    </div>
+    <div class="information2">
+      <p>Moose make their home in woodland habitats and wetlands.</p>
+      <br />
+      <br />
+      <p>
+        Logging in Scandinavia has helped to increased their available habitat
+        as it removed natural taiga forest which is replaced with secondary
+        woodland.
+      </p>
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 17000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>

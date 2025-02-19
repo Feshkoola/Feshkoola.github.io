@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Moose Website</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Moose Sound.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="unclicked">JOKES</div></a>
+        <a href="Diet.html"><div class="unclicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="unclicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="unclicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="clicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="unclicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>Appearance</h2>
+      <p>
+        Moose are covered with a coating of brownish-grey fur in summer which
+        turns greyer during winter. Their legs feature pale fur.
+      </p>
+      <br />
+      <br />
+      <p>
+        The legs are long and end with wide hooves helping them to wade through
+        snow or cross snow. These legs also help them to wade through bogs and
+        shallow lakes or allow them to cross fallen trees.
+      </p>
+      <br />
+      <br />
+      <p>
+        During the summer, males being to grow in their large antlers. These are
+        covered by soft skin known as "velvet." This is shed by autumn when the
+        breeding season begins.
+      </p>
+      <br />
+      <br />
+      <p>
+        Each antler may measure up to 2m (6.5ft) tall with up 20 points on
+        each.​
+      </p>
+    </div>
+    <div class="imageContainer">
+      <img
+        class="image1"
+        src="Moose in undergrowth.jpg"
+        onclick="playAudio();"
+      />
+    </div>
+    <div class="information2">
+      <p>
+        Inside the mouth they lack upper teeth instead grabbing food with the
+        upper lip.​
+      </p>
+      <br />
+      <br />
+      <p>
+        Hanging below the throat is a flap of skin known as the dewlap. This
+        tends to become smaller as the animal grows. This may also be known as
+        the bell.​
+      </p>
+      <br />
+      <br />
+      <p>
+        The moose is the world's largest species of deer. Their body will
+        measure between 2.4 and 3m (7.75 and 9.75ft) long with an average weight
+        of between 500 and 700kg (1,100 and 1,550lbs). At the shoulder they
+        stand 1.4-2.3m (4.5-7.5ft) tall.
+      </p>
+      <br />
+      <br />
+      <p>
+        American moose tend to be larger than those in Europe. Males may be up
+        to twice as large as the females.
+      </p>
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 7000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>

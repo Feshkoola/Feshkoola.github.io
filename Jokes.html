@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Moose Website</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Moose Math.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="clicked">JOKES</div></a>
+        <a href="Diet.html"><div class="unclicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="unclicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="unclicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="unclicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="unclicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2 style="font-size: 40px; margin-bottom: 10px">Jokes</h2>
+      <p onclick="alert('Because he was a Party Animal')" class="p2">
+        Why did the moose go to the party?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('A moose-ician')" class="p2">
+        What do you call a moose that can play the piano?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('To work on his moose-cles')" class="p2">
+        Why did the moose join the gym?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('A com-moose-dian')" class="p2">
+        What do you call a moose that tells jokes?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('Because the chicken needed a day off')" class="p2">
+        Why did the moose cross the road?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('A moose-ive eater')" class="p2">
+        What do you call a moose that cannot stop eating?
+      </p>
+      <br />
+      <br />
+      <p onclick="alert('Anony-moose')" class="p2">
+        What do you call a moose with no name?
+      </p>
+    </div>
+    <div class="imageContainer">
+      <img class="image1" src="Moose Joke Image.jpg" onclick="playAudio();" />
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 15000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>

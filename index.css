@@ -1,0 +1,164 @@
+:root {
+  --red: rgb(161, 0, 0);
+}
+
+body {
+  position: relative;
+  height: 1000px;
+  min-width: 1500px;
+}
+
+#header {
+  background-color: white;
+  width: 100%;
+  height: 255px;
+  position: sticky;
+  top: 0;
+}
+
+h1 {
+  width: 100%;
+  background-color: var(--red);
+  height: 150px;
+  color: white;
+  font-family: Arial Black;
+  text-align: center;
+  font-size: 100px;
+  margin: 0px;
+  float: left;
+}
+
+.selectionPanel {
+  float: left;
+  height: 95px;
+  background-color: var(--red);
+  margin-top: 10px;
+  width: 100%;
+  font-family: Calibri;
+  font-size: 20px;
+}
+
+.unclicked {
+  color: white;
+  background-color: var(--red);
+  width: 15%;
+  float: left;
+  margin-left: 1%;
+  height: 58px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 25px;
+  transition: font-size 0.15s, text-decoration 0.15s;
+}
+
+.unclicked:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.clicked {
+  color: var(--red);
+  background-color: white;
+  width: 18%;
+  float: left;
+  margin-left: 1%;
+  height: 52px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 12px;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+
+.information {
+  margin-left: 40px;
+  width: 55%;
+  margin-top: 30px;
+  float: left;
+  background-color: white;
+  height: 500px;
+}
+
+.information2 {
+  float: left;
+  background-color: white;
+  width: 97%;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  margin: 0px;
+  font-family: calibri;
+  font-weight: bold;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+p {
+  font-family: Calibri;
+  font-size: 30px;
+  margin: 0px;
+  transition: all 0.15s;
+}
+
+p:hover {
+  color: var(--red);
+  font-weight: bolder;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+p:active {
+  opacity: 0.5;
+}
+
+.p2 {
+  font-family: Calibri;
+  font-size: 40px;
+  margin: 0px;
+  transition: all 0.15s;
+}
+
+.p2:hover {
+  color: var(--red);
+  font-weight: bolder;
+  font-size: 31px;
+  cursor: pointer;
+}
+
+.p2:active {
+  opacity: 0.5;
+}
+
+.imageContainer {
+  width: 39%;
+  background-color: none;
+  float: left;
+  height: 500px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  transition: all 0.15s, border-radius 1s;
+  cursor: pointer;
+}
+
+.image1:hover {
+  height: 105%;
+  width: 101%;
+}
+
+.activeImage1 {
+  border-radius: 500px;
+}

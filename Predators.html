@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Moose Website</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Moose Sound.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="unclicked">JOKES</div></a>
+        <a href="Diet.html"><div class="unclicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="unclicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="unclicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="unclicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="clicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>Predators</h2>
+      <p>
+        Natural predators of the moose include bears, tigers and wolves. These
+        animals target calves with the adult males using their large antlers to
+        defend themselves.
+      </p>
+      <br />
+      <br />
+      <p>
+        ​ Humans impact their population through forestry and agriculture which
+        decreases the availability of their preferred forests.
+      </p>
+      <br />
+      <br />
+      <p>
+        Parasites such as ticks can also become a major threat. They will attach
+        in large numbers to a moose potentially causing anemia. In an attempt to
+        rid themselves of the ticks they will rub off patches of fur.
+      </p>
+      <br />
+      <br />
+      <p>
+        Some hunting occurs. In areas this may be to reduce their impact on
+        forestry while in others it is for sport. They are also commonly
+        impacted by vehicle strikes both on roads and trainlines.
+      </p>
+    </div>
+    <div class="imageContainer">
+      <img
+        class="image1"
+        src="Moose getting chased by wolf.jpg"
+        onclick="playAudio();"
+      />
+    </div>
+    <div class="information2">
+      <br />
+      <h2>The Wild Javi</h2>
+      <p>
+        The moose's biggest predator today is the wild Javi. This monster of an
+        animal can consume up to 10 million times its own weight. Therefore it
+        is a large threat to every other animal.
+      </p>
+      <br />
+      <br />
+      <p>
+        On one occasion a wild Javi was seen to have eaten a total of 67 mooses
+        and 78 tonnes of wood. The USAF had to use rockets to safely remove the
+        threat to neighbouring towns and villages.
+      </p>
+      <br />
+      <br />
+      <p>
+        Despite being so powerful, the wild Javi is an extremely endangered
+        species and has not been sighted for the past 12 years. This is mainly
+        due to the fact that these creatures are so greedy that by the age of
+        only 10 years, they will attempt to eat themselves. If they manage to do
+        so (which is usually the case) the only thing remaining would be its
+        tummy – this contains the rest of the chewed up body.
+      </p>
+      <br />
+      <br />
+      <p>
+        If you see a wild Javi in your house, you need to call the Javi Busters
+        to come and sort out the situation before it eats everything within a 10
+        km radius. Never try and approach a wild Javi as they are extremely
+        dangerous and could eat the Empire States Building in less than 10 min.
+        Stay Away!
+      </p>
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 7000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>

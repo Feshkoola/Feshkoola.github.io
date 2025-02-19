@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>The Moose</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Moose Sound.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="unclicked">JOKES</div></a>
+        <a href="Diet.html"><div class="clicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="unclicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="unclicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="unclicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="unclicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>Diet</h2>
+      <p>
+        Moose are herbivores and they feed on a range of twigs, lichen, moss,
+        bark and aquatic plants.
+      </p>
+      <br />
+      <br />
+      <p>
+        During winter they will kick away snow to access moss and lichen hidden
+        underneath. Due to a lack of plant food, they will also chew bark and
+        twigs more often.​
+      </p>
+      <br />
+      <br />
+      <p>
+        ​They may also gather at road sides in winter when they eat road salt
+        which has run off. This replaces electrolytes which are absent from
+        their diet in winter.​
+      </p>
+      <br />
+      <br />
+      <p>
+        Each day they may eat up to 24kg (53lbs) with more food consumed during
+        summer.
+      </p>
+    </div>
+    <div class="imageContainer">
+      <img
+        class="image1"
+        src="Moose eating leaves.jpg"
+        onclick="playAudio();"
+      />
+    </div>
+    <div class="information2">
+      <p>
+        Mooses are also know to invade homes in towns and cities near to where
+        they live. They usually use the sewage pipes as their main method of
+        transport and they enter houses through the chimney.
+      </p>
+      <br />
+      <br />
+      <p>
+        When inside a house, a moose will begin to eat absolutely everything in
+        sight: from tables and chairs to TV screens and even grand pianos.
+        Mooses might even eat you if they are really hungry.​
+      </p>
+      <br />
+      <br />
+      <p>
+        On one occasion, a moose managed to eat an entire house and the people
+        inside – mooses are very dangerous!​
+      </p>
+      <br />
+      <br />
+      <p>
+        This is why it is important to moose-proof your house by setting up
+        spike traps and broccoli (a moose's greatest fear) as well as building
+        an emergency moose-proof bunker in your back garden.​
+      </p>
+      <br />
+      <br />
+      <p>
+        If a moose does manage to somehow get inside your house, you should not
+        try to approach it and fight it yourself. You should call your local
+        Moose-buster squad and leave the moose-fighting to the experts.
+        Remember, if a moose sees you as a threat, there is a high chance that
+        it will decide to eat you.​
+      </p>
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 7000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>

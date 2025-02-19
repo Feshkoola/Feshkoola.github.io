@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Moose Website</title>
+  </head>
+
+  <body>
+    <audio id="audio">
+      <source src="Minion Song.mp3" />
+    </audio>
+
+    <div id="header">
+      <h1>THE MOOSE</h1>
+      <div class="selectionPanel">
+        <a href="Jokes.html"><div class="unclicked">JOKES</div></a>
+        <a href="Diet.html"><div class="unclicked">DIET</div></a>
+        <a href="Fun Facts.html"><div class="clicked">FUN FACTS</div></a>
+        <a href="Habitat.html"><div class="unclicked">HABITAT</div></a>
+        <a href="Appearance.html"><div class="unclicked">APPEARANCE</div></a>
+        <a href="Predators.html"><div class="unclicked">PREDATORS</div></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>Facts</h2>
+      <p>Moose are the largest of all the deer species in the world.</p>
+      <br />
+      <br />
+      <p>
+        Only male moose have antlers, which they shed and regrow every year.
+      </p>
+      <br />
+      <br />
+      <p>Moose are also called rubber-nosed swamp donkeys</p>
+      <br />
+      <br />
+      <p>A moose can kick in any direction with its front hooves</p>
+      <br />
+      <br />
+      <p>
+        A moose has a flap of skin under its chin called a bell or a dewlap.
+      </p>
+      <br />
+      <br />
+      <p>Moose calves can outrun a human by the time they’re five days old.</p>
+      <br />
+      <br />
+      <p>Moose are peaceful animals which very rarely become aggressive.</p>
+    </div>
+    <div class="imageContainer">
+      <img class="image1" src="Minions.jpg" onclick="playAudio();" />
+    </div>
+
+    <script>
+      //Variables
+      const audioButton = document.getElementById("audio");
+      const image = document.querySelector(".image1");
+
+      //Functions
+      function playAudio() {
+        image.classList.add("activeImage1");
+        audioButton.play();
+        window.setTimeout(stopOpacity, 12000);
+        console.log("done");
+      }
+
+      function stopOpacity() {
+        image.classList.remove("activeImage1");
+      }
+    </script>
+  </body>
+</html>
